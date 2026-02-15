@@ -14,11 +14,39 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Deploy to EC2
-        uses: appleboy/ssh-action@v1.0.0
+        uses: appleboy/ssh-action@v0.1.10
         with:
-          host: ${{ secrets.EC2_HOST }}
-          username: ${{ secrets.EC2_USER }}
-          key: ${{ secrets.EC2_KEY }}
+          host: 13.127.29.225
+          username: ubuntu
+          key: 
+          -----BEGIN RSA PRIVATE KEY-----
+MIIEogIBAAKCAQEAnZLe3YRcS9vZ8lBMjF/8kgxq7McWReJt1x4YTxVvaC5g6qdn
+7YhRcE1dMvyUGOKR8t39RztrgblGyIcF2S9zNKNwD+/aQwbM/V2BycWcHFsr7jD/
+U5NN4XP9R3V9nyJKDJfbn9zlis93syosbEaeIewU4M3R2Wc6qMiiOY/hkz1yBOzP
+Cc0CxMZm6dX+4t5DC2hHqy6f2QX3MNJyBKCxCobeElWI4WGBmQXpEaMgmXhHf8gn
+OXQdlh7kx2vHKfYOgJ0ZnEoi7WWM6a+DhgWfFLCUuVeI4ovBRRm9QlM+j/br0UZr
+QU2wwTggDGtwsJfg/7DdIy8ZzOhpLznomKOf0QIDAQABAoIBAFHdmX5bIxyiZ3RW
+Nb8Eq5Mxcmf7811xi4Gk+Bo2V8A3wFCJkxw8o5sGBrLTuRnItO0KWmmkvHEUUmsi
+g25YEbG6bCFLiwkhwmSsLR8oVLgCwispN64zLNZCTcfPiemghfpO92LyACwDJ/xk
+n9nNQqD7J8m4BRu/XyGLw4TGdPrqs8UCZo+ua7hRM9qnKvFDJPd1rlUPiuDR64bw
+bcfrlWMw1XjMiw8CNXM3Horxl581fELMezFOzvOllYdtrXk5ATl6pOB9XPdKdXVp
+Z85dEoCUkG5bCr7lW4M3WD1rPRam/PyQSQi03IEHVrinZYFVEAhg7X5Py1H000+d
+wQWLrjUCgYEAzu/b8LkmcyAszdwGRI7idEYoavOPcVFNloTn/C8gcRn66Xs8cMJn
+PyZh8kewEzRHRpWX9xFK972jE8ClAg8QHNf9F56APAAppCtQ50P0IYJhBWqztemG
+mQVDEmuzj6EDZsrbpQsCrKn4CJXN94jeQp1juYBeJ/MItP/et+b5ZiMCgYEAwu7i
+oeUoXcYzerHtP7Jky52dOrtDASUyxRklZJs21/Wc0IqaHx/JnlJWHlYKwvxE1YPz
+2+90o9DiyDbwWx3P1BeOGnacQsijTnaix5jNtDvzsLKiKWgg/tUuXE8B8oLdFj/u
+oWx67icGiAQ4F3If5/riNBW4be6YDMAgO3VWj3sCgYAl+QnJAJC3q33NQMS9q+KO
+J5mfFpaJ2rt8FWNkeVlgp73NPln27xV3Fxn+FX2P6JXzs9uw8LFrCJd2NnGRESaJ
+xHCi9ujdGcKKZ5Bu/586zuvyzIOxq+qRBdAq/yxx/L/dCviHLqANAxuKp8Kl2629
+V5hHH/EnL4e3fwRlhrLZNQKBgB3M7WK4qMIlQct5Ff8N47DpKJdI94ZeTHOrU3cc
+73Z2ewG6nrMxZd5JUhcTKlQCwvctVAOEiP1eOr1HANm9Jf+TlkrfZSYkjCq7okkH
+SDNMkwWpWXchDyJGLu83uOF9NhVnsrCE6AoudyYmFvkmnlAVn608wNQ1jJMub/8H
+AjOvAoGAd5/To7VCet5sf9pXYAy97gF20U1Kd4hh1Jj5uft7EWsEF11xc6nX6Buj
+VfIrcBAdBBMkrPOanh3fstFNOKYHTMhJI1+Z8KQdhdFdT8NpVe6ht7EBE+JmOGpw
+uE+HoQXYqST+HjcIAvvje32eX9zTB7epEjzBEYy1tS0HuDMXj2A=
+-----END RSA PRIVATE KEY-----
+          
           script: |
             cd /home/ubuntu/node-basic
             git pull origin main
